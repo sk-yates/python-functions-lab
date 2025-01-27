@@ -62,7 +62,7 @@ def apply_discount(price, discount):
 
 print('Exercise 3:', apply_discount(100, 25))
 print('Exercise 3 (alt):', apply_discount(80, 10))
-print('E3 - Not yet complete')
+print('E3 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
@@ -88,7 +88,7 @@ def convert_temperature(temp, unit):
 
 print('Exercise 4: Convert 0°C to Fahrenheit:', convert_temperature(0, 'C'))
 print('Exercise 4: Convert 32°F to Celsius:', convert_temperature(32, 'F'))
-print('E4 - Not yet complete')
+print('E4 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
@@ -113,7 +113,7 @@ def sum_to(n):
 
 print('Exercise 5:', sum_to(6))
 print('Exercise 5 (alt):', sum_to(10))
-print('E5 - Not yet complete')
+print('E5 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
@@ -127,11 +127,17 @@ print('========================================================')
 #
 # Define your function and test it with different inputs.
 
-def largest():
-    pass
+def largest(num1, num2, num3):
+    if num1 > num2 and num1 > num3:
+        return f"{num1} is the largest number"
+    elif num2 > num1 and num2 > num3:
+        return f"{num2} is the largest number"
+    else:
+        return f"{num3} is the largest number"
 
 print('Exercise 6:', largest(1, 2, 3))
-print('E6 - Not yet complete')
+print('Exercise 6 (alt):', largest(10, 4, 2))
+print('E6 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
@@ -145,11 +151,14 @@ print('========================================================')
 #
 # Write your function and test its output below.
 
-def calculate_tip():
-    pass
+def calculate_tip(bill, tip):
+    tip_cal = bill * (tip / 100)
+
+    print(tip_cal)
 
 print('Exercise 7:', calculate_tip(50, 20))
-print('E7 - Not yet complete')
+print('Exercise 7 (alt):', calculate_tip(100, 25))
+print('E7 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
@@ -164,11 +173,17 @@ print('========================================================')
 #
 # Define the function and call it with different sets of numbers to test.
 
-def product():
-    pass
+def product(*args):
+    total = 1
+
+    for arg in args:
+        total *= arg
+
+    return total
 
 print('Exercise 8:', product(2, 5, 5))
-print('E8 - Not yet complete')
+print('Exercise 8 (alt):', product(-1, 4))
+print('E8 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
@@ -187,11 +202,24 @@ print('========================================================')
 #
 # Define the function and then call it below.
 
-def basic_calculator():
-    pass
+def basic_calculator(num1, num2, function):
+    
+    if function == "subtract":
+       result = num1 - num2
+    elif function == "add":
+       result = num1 + num2
+    elif function == "divide":
+       result = num1 / num2
+    elif function == "multiply":
+       result = num1 * num2
+
+    return result
 
 print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"))
-print('E9 - Not yet complete')
+print('Exercise 9 Result (alt-1):', basic_calculator(10, 5, "add"))
+print('Exercise 9 Result (alt-2):', basic_calculator(10, 5, "divide"))
+print('Exercise 9 Result (alt-3):', basic_calculator(10, 5, "multiply"))
+print('E9 - Complete')
 print('========================================================')
 
 # ---------------------------------------------------------------
